@@ -35,6 +35,9 @@ class Scrst < Formula
 
     bin.install Dir[libexec/"bin/*"]
     bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+
+    prefix.install Dir["services"]
+    prefix.install Dir["screenshot.dzbundle"]
   end
 
   def caveats; <<-EOS.undent
